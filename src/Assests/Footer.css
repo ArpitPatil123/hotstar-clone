@@ -1,0 +1,149 @@
+footer {
+  margin: 100px 50px 50px 50px;
+  display: flex;
+  align-items: center;
+  /* height: 150px; */
+}
+
+.footer_left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer_left > .footer_navigation > ul {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_left .footer_navigation > ul > li {
+  list-style-type: none;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.footer_left .footer_navigation > ul > li:hover {
+  color: #1f80e0;
+}
+
+.footer_left > p {
+  font-size: 14px;
+  line-height: 20px;
+  padding-right: 50px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer_right {
+  width: 40%;
+  display: flex;
+  gap: 60px;
+}
+
+.footer_right > .social_media {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_right > .social_media > .social_icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_right > .social_media > .social_icons > .icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.footer_right > .social_media > .social_icons > .icon:hover {
+  background-color: #1f80e0;
+  cursor: pointer;
+}
+
+.footer_right > .social_media > p {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer_right > .hotstar_app {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_right > .hotstar_app > p {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer_right > .hotstar_app > .available_on {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_right > .hotstar_app > .available_on > .store {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  gap: 2px;
+  padding: 8px 4px 8px 4px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer_right > .hotstar_app > .available_on > .store:hover {
+  background-color: #1f80e0;
+  cursor: pointer;
+}
+
+.footer_right > .hotstar_app > .available_on > .store > .info > p {
+  font-size: 10px;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.footer_right > .hotstar_app > .available_on > .store > .info > p:nth-child(2) {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* /////////////////////////Responsive////////////////////////// */
+
+@media screen and (max-width: 480px) {
+  footer {
+    margin: 50px 16px 50px 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer_left {
+    width: 100%;
+  }
+
+  .footer_left > .footer_navigation > ul {
+    flex-wrap: wrap;
+  }
+
+  .footer_right {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .footer_right > .social_media > .social_icons {
+    justify-content: flex-start;
+  }
+
+  .footer_left > p {
+    padding-right: 16px;
+  }
+}

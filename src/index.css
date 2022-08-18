@@ -1,0 +1,32 @@
+* {
+  font-family: "Mouse Memoirs", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, rgb(20, 27, 41), #0c111b 300px);
+  background-repeat: no-repeat;
+  color: #fff;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+  font-size: 1.125em;
+}
+
+.brand_hover {
+  width: fit-content;
+  margin-bottom: 14px;
+  margin-top: 24px;
+  font-size: 24px;
+}
+
+.brand_hover:hover {
+  color: #1f80e0;
+  cursor: pointer;
+}
+

@@ -1,0 +1,144 @@
+.movies_slider_container {
+  margin: 50px 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movies_container .slick-prev {
+  left: -60px;
+  z-index: 100;
+  display: none;
+  height: 110%;
+  width: 5%;
+  background: linear-gradient(to right, #111 10%, transparent);
+}
+
+.movies_container :hover .slick-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies_container .slick-next {
+  right: -60px;
+  z-index: 100;
+  display: none;
+  height: 110%;
+  width: 5%;
+  background: linear-gradient(to left, #111 10%, transparent);
+}
+
+.movies_container :hover .slick-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies_container .slick-prev::before {
+  display: none;
+}
+
+.movies_container .slick-next::before {
+  display: none;
+}
+
+.movie_card {
+  height: 250px;
+  width: 166px !important;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.movies_container .slick-slider .slick-list {
+  overflow: visible;
+}
+
+.movie_card:hover {
+  z-index: 1000;
+  transform: scale(1.2);
+}
+
+.movie_card:hover > .content_buttons {
+  bottom: 0;
+  background: linear-gradient(to top, #192133 80%, transparent);
+}
+
+.movie_card:hover > img {
+  filter: blur(2px);
+  transform: translateY(-20px);
+}
+
+.movie_card > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.movie_card > .content_buttons {
+  position: absolute;
+  width: 100%;
+  bottom: -100%;
+  padding: 10px;
+  padding-bottom: 20px;
+  transition: all 0.5s;
+}
+
+.movie_card > .content_buttons > .card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.movie_card > .content_buttons > .card_content > h3 {
+  font-size: 12px;
+  color: #fcfcfc;
+}
+
+.movie_card > .content_buttons > .card_content > h5 {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.movie_card > .content_buttons > .card_content > p {
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.movie_card > .content_buttons > .card_buttons {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  margin-top: 10px;
+}
+
+.movie_card > .content_buttons > .card_buttons > button {
+  width: 100%;
+  height: 20px;
+  font-size: 10px;
+  margin-right: 2px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: none;
+  color: #fcfcfc;
+  border: none;
+  text-transform: uppercase;
+}
+
+.movie_card > .content_buttons > .card_buttons :hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+/* /////////////////////// Responsive /////////////////// */
+
+@media screen and (max-width: 480px) {
+  .movies_slider_container {
+    margin: 15px 16px 0;
+  }
+}

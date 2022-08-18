@@ -1,0 +1,148 @@
+/* the slides */
+.slider .slick-slide {
+  padding: 0 15px;
+}
+/* the parent */
+.slider .slick-list {
+  padding: 0 -15px;
+}
+
+.slider .slick-prev {
+  left: 60px;
+  z-index: 1;
+}
+
+.slider .slick-next {
+  right: 60px;
+}
+
+.slider .slick-arrow {
+  display: none;
+}
+
+.slider:hover .slick-arrow {
+  display: block;
+}
+
+.slider .slick-prev::before {
+  display: none;
+}
+
+.slider .slick-next::before {
+  display: none;
+}
+
+.slider {
+  height: 400px;
+  margin-top: 10px;
+}
+
+.slider_container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slider_content {
+  position: relative;
+  height: 400px;
+  background-color: #030b17;
+  width: 40%;
+  padding: 30px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+.slider_content ::after {
+  content: "";
+  height: 100%;
+  width: 40%;
+  top: 0;
+  right: -75px;
+  position: absolute;
+  background: linear-gradient(to right, #030b17 70%, transparent 99%);
+  z-index: -5;
+}
+
+.slider_content > h1 {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.slider_content > ul {
+  display: flex;
+  gap: 26px;
+  color: gray;
+  font-weight: 600;
+  font-style: 16px;
+}
+
+.slider_content > ul > li:nth-child(1) {
+  list-style: none;
+}
+
+.slider_content > p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.slider_container > img {
+  width: 70%;
+  height: 400px;
+  z-index: 1;
+}
+
+/* ////////////////////// Responsive ///////////////////////// */
+
+@media screen and (max-width: 480px) {
+  .slider .slick-slide {
+    padding: 0 4px;
+  }
+  /* the parent */
+  .slider .slick-list {
+    padding: 0 -4px;
+  }
+
+  .slider_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .slider_content ::after {
+    display: none;
+  }
+
+  .slider {
+    height: 250px;
+  }
+
+  .slider_content {
+    height: 250px;
+    background: none;
+    padding: 0;
+  }
+
+  .slider_content > h1 {
+    display: none;
+  }
+
+  .slider_content > ul {
+    display: none;
+  }
+
+  .slider_content > p {
+    display: none;
+  }
+
+  .slider:hover .slick-arrow {
+    display: none;
+  }
+}
