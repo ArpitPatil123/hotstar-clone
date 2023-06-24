@@ -16,7 +16,7 @@ const SliderRow = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
   let slidesToShow = 7;
 
-  //////////////////////// Requesting movies from TMDB API //////////////////////////////
+  //////////////////////// Requesting movies from TMDB  API //////////////////////////////
   useEffect(() => {
     // if [], run once when the row(recommended) loads,and don't run again
     async function fetchData() {
@@ -81,7 +81,7 @@ const SliderRow = ({ title, fetchUrl }) => {
     <div>
       <div className="movies_container" style={{ width: "100%" }}>
         <h2 className="brand_hover">{title}</h2>
-        <Slider {...settings}>
+        <Slider {...settings} initialSlide={0}>
           {movies.map((data) => (
             <Link to={"details/" + data.id} state={{ id: data.id }}>
               <div className="movie_card">

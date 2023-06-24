@@ -10,7 +10,7 @@ import movieTrailer from "movie-trailer";
 import ClearIcon from "@mui/icons-material/Clear";
 
 let imageUrl = "https://image.tmdb.org/t/p/w780";
-const api_key = "e07f5da07b3e1be9c5f23588cc5eae82";
+const api_key = process.env.REACT_APP_API_KEY;
 
 const Details = () => {
   const [id, setId] = useState(0);
@@ -18,7 +18,7 @@ const Details = () => {
   const [trailerUrl, setTrailerUrl] = useState("");
   const location = useLocation();
   const movieurl = `/movie/${id}?api_key=${api_key}`;
-  // const trailer = `/movie/${id}/videos?api_key=e07f5da07b3e1be9c5f23588cc5eae82&language=hi-IN&region=IN&with_original_language=hi`;
+  // const trailer = `/movie/${id}/videos?api_key={your_api_key}&language=hi-IN&region=IN&with_original_language=hi`;
   const opts = {
     height: "390",
     width: "100%",
@@ -119,5 +119,3 @@ const Details = () => {
 };
 
 export default Details;
-
-//https://api.themoviedb.org/3/movie/783461?api_key=e07f5da07b3e1be9c5f23588cc5eae82
